@@ -22,7 +22,8 @@
     <link href="{{ url_for ('static', filename='vendor/magnific-popup/magnific-popup.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template -->
-    <link href="{{url_for ('static', filename='css/freelancer.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for ('static', filename='css/freelancer.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for ('static', filename='css/styles.css') }}" rel="stylesheet">
 
   </head>
 
@@ -45,10 +46,10 @@
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#play">Play</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
             </li>
           </ul>
         </div>
@@ -58,7 +59,7 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
-        <img class="img-fluid mb-5 d-block mx-auto" src="{{ url_for ('static', filename='img/football.png') }}" alt="">
+        <img class="mb-5 d-block mx-auto" src="{{ url_for ('static', filename='img/football.png') }}" alt="">
         <h1 class="text-uppercase mb-0">Guess The Footballer Game</h1>
         <hr class="star-light">
         <h2 class="font-weight-light mb-0">Score One Point For Every Correct Answer</h2>
@@ -75,8 +76,7 @@
             <form method="POST">
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                  <label for="username">Username</label>
-                  <input class="form-control" id="username" name="username" type="text" placeholder="Username" required="required" data-validation-required-message="Please enter your username.">
+                  <input class="form-control" id="username" name="username" type="text" placeholder="Username" required="required" data-validation-required-message="Please enter your username">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
@@ -92,325 +92,460 @@
     </section>
 
     <!-- Play Grid Section -->
-    <section class="portfolio" id="play">
+    <section class="portfolio bg-primary text-white mb-0" id="play">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Play</h2>
-        <hr class="star-dark mb-5">
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/neymar.jpg') }}" alt="">
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/hugo_lloris.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/lorenzo_insigne.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/keiran_trippier.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/roberto_firmino.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/jordi_alba.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/antonio_valencia.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/benjamin_pavard.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/christian_eriksen.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/danny_welbeck.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/denis_cheryshev.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/diego_godin.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/dimitri_payet.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/dries_mertens.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/harry_maguire.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/ivan_perisic.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/jadon_sancho.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/james_milner.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/john_stones.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/mario_mandzukic.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/olivier_giroud.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/raphael_varane.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/sergio_aguero.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/thomas_muller.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/toni_kroos.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/victor_moses.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/alvaro_morata.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/arjen_robben.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/jesse_lingard.jpg') }}" alt="">
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a class="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
-              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                  <i class="fas fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/jose_fonte.jpg') }}" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="bg-primary text-white mb-0" id="about">
-      <div class="container">
-        <h2 class="text-center text-uppercase text-white">About</h2>
+        <h2 class="text-center text-uppercase text-white">Play</h2>
         <hr class="star-light mb-5">
         <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p class="lead">My name is Jonathan Walters and this is my project as part of my Full Stack Developer Diploma with the Code Institute.</p>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/neymar.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group answers controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
           </div>
-          <div class="col-lg-4 mr-auto">
-            <p class="lead">I have developed a guess the footballer game</p>
+          <div class="col-md-6 col-lg-4">
+              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/hugo_lloris.jpg') }}" alt="">
+              <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>          
+          </div>
+          <div class="col-md-6 col-lg-4">
+              <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/lorenzo_insigne.jpg') }}" alt="">
+              <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>            
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/keiran_trippier.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/roberto_firmino.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/jordi_alba.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/antonio_valencia.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/benjamin_pavard.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/christian_eriksen.jpg') }}" alt="">
+             <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/danny_welbeck.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/denis_cheryshev.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/diego_godin.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/dimitri_payet.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/dries_mertens.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/harry_maguire.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/ivan_perisic.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/jadon_sancho.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/james_milner.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/john_stones.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/mario_mandzukic.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/olivier_giroud.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/raphael_varane.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/sergio_aguero.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/thomas_muller.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/toni_kroos.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/victor_moses.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/alvaro_morata.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/arjen_robben.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/jesse_lingard.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <img class="img-fluid" src="{{ url_for ('static', filename='img/portfolio/jose_fonte.jpg') }}" alt="">
+            <form method="POST">
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                  <input class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer.">
+                </div>
+              </div>
+              <br>
+              <div id="success"></div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -465,53 +600,21 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer text-center">
+<!-- About Section -->
+    <section class="bg-primary text-white mb-0" id="about">
       <div class="container">
+        <h2 class="text-center text-uppercase text-white">About</h2>
+        <hr class="star-light mb-5">
         <div class="row">
-          <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Location</h4>
-            <p class="lead mb-0">2215 John Daniel Drive
-              <br>Clark, MO 65243</p>
+          <div class="col-lg-4 ml-auto">
+            <p class="lead">My name is Jonathan Walters and this is my project as part of my Full Stack Developer Diploma with the Code Institute.</p>
           </div>
-          <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Around the Web</h4>
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-google-plus-g"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-linkedin-in"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                  <i class="fab fa-fw fa-dribbble"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <h4 class="text-uppercase mb-4">About Freelancer</h4>
-            <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
-              <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+          <div class="col-lg-4 mr-auto">
+            <p class="lead">I have developed a guess the footballer game</p>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
 
     <div class="copyright py-4 text-center text-white">
       <div class="container">
