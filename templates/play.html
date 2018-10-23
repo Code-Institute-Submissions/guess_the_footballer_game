@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+{% block content %}
+
+<section class="portfolio bg-primary text-white mb-0" id="play">
+    <div class="container">
+        <h2 class="text-center text-uppercase text-white">Play</h2>
+        <hr class="star-light mb-5">
+        
+        <div class="row">
+          
+            {% for player in players %}
+          
+            <div class="col-md-6 col-lg-4">
+                <img class="img-fluid" src="{{ player.image_source }}" alt="">
+                <form method="POST">
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group answers controls pb-2">
+                      <textarea rows="1" class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer."></textarea>
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+                </div>
+                </form>
+            </div>
+          
+            {% endfor %}
+      
+        </div>
+    </div>
+</section>
+
+{% endblock %}
