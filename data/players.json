@@ -1,182 +1,151 @@
 [
     {
-        "id": 1,
-        "image_source": "img/portfolio/neymar.jpg",
+        "image_source": "static/img/portfolio/neymar.jpg",
         "answer": "Neymar"
     },
     
     {
-        "id": 2,
-        "image_source": "img/portfolio/hugo_lloris.jpg",
+        "image_source": "static/img/portfolio/hugo_lloris.jpg",
         "answer": "Hugo Lloris"
     },
     
     {
-        "id": 3,
-        "image_source": "img/portfolio/lorenzo_insigne.jpg",
+        "image_source": "static/img/portfolio/lorenzo_insigne.jpg",
         "answer": "Lorenzo Insigne"
     },
     
     {
-        "id": 4,
-        "image_source": "img/portfolio/keiran_trippier.jpg",
+        "image_source": "static/img/portfolio/keiran_trippier.jpg",
         "answer": "Keiran Trippier"
     },
     
     {
-        "id": 5,
-        "image_source": "img/portfolio/roberto_firmino.jpg",
+        "image_source": "static/img/portfolio/roberto_firmino.jpg",
         "answer": "Roberto Firmino"
     },
     
     {
-        "id": 6,
-        "image_source": "img/portfolio/jordi_alba.jpg",
+        "image_source": "static/img/portfolio/jordi_alba.jpg",
         "answer": "Jordi Alba"
     },
     
     {
-        "id": 7,
-        "image_source": "img/portfolio/antonio_valencia.jpg",
+        "image_source": "static/img/portfolio/antonio_valencia.jpg",
         "answer": "Antonio Valencia"
     },
     
     {
-        "id": 8,
-        "image_source": "img/portfolio/benjamin_pavard.jpg",
+        "image_source": "static/img/portfolio/benjamin_pavard.jpg",
         "answer": "Benjamin Pavard"
     },
     
     {
-        "id": 9,
-        "image_source": "img/portfolio/christian_eriksen.jpg",
+        "image_source": "static/img/portfolio/christian_eriksen.jpg",
         "answer": "Christian Eriksen"
     },
     
     {
-        "id": 10,
-        "image_source": "img/portfolio/danny_welbeck.jpg",
+        "image_source": "static/img/portfolio/danny_welbeck.jpg",
         "answer": "Danny Welbeck"
     },
     
     {
-        "id": 11,
-        "image_source": "img/portfolio/denis_cheryshev.jpg",
+        "image_source": "static/img/portfolio/denis_cheryshev.jpg",
         "answer": "Denis Cheryshev"
     },
     
     {
-        "id": 12,
-        "image_source": "img/portfolio/diego_godin.jpg",
+        "image_source": "static/img/portfolio/diego_godin.jpg",
         "answer": "Diego Godin"
     },
     
     {
-        "id": 13,
-        "image_source": "img/portfolio/dimitri_payet.jpg",
+        "image_source": "static/img/portfolio/dimitri_payet.jpg",
         "answer": "Dimitri Payet"
     },
     
     {
-        "id": 14,
-        "image_source": "img/portfolio/dries_mertens.jpg",
+        "image_source": "static/img/portfolio/dries_mertens.jpg",
         "answer": "Dries Mertens"
     },
     
     {
-        "id": 15,
-        "image_source": "img/portfolio/harry_maguire.jpg",
+        "image_source": "static/img/portfolio/harry_maguire.jpg",
         "answer": "Harry Maguire"
     },
     
     {
-        "id": 16,
-        "image_source": "img/portfolio/ivan_perisic.jpg",
+        "image_source": "static/img/portfolio/ivan_perisic.jpg",
         "answer": "Ivan Perisic"
     },
     
     {
-        "id": 17,
-        "image_source": "img/portfolio/jadon_sancho.jpg",
+        "image_source": "static/img/portfolio/jadon_sancho.jpg",
         "answer": "Jadon Sancho"
     },
     
     {
-        "id": 18,
-        "image_source": "img/portfolio/james_milner.jpg",
+        "image_source": "static/img/portfolio/james_milner.jpg",
         "answer": "James Milner"
     },
     
     {
-        "id": 19,
-        "image_source": "img/portfolio/john_stones.jpg",
+        "image_source": "static/img/portfolio/john_stones.jpg",
         "answer": "John Stones"
     },
     
     {
-        "id": 20,
-        "image_source": "img/portfolio/mario_mandzukic.jpg",
+        "image_source": "static/img/portfolio/mario_mandzukic.jpg",
         "answer": "Mario Mandzukic"
     },
     
     {
-        "id": 21,
-        "image_source": "img/portfolio/olivier_giroud.jpg",
+        "image_source": "static/img/portfolio/olivier_giroud.jpg",
         "answer": "Olivier Giroud"
     },
     
     {
-        "id": 22,
-        "image_source": "img/portfolio/raphael_varane.jpg",
+        "image_source": "static/img/portfolio/raphael_varane.jpg",
         "answer": "Raphael Varane"
     },
     
     {
-        "id": 23,
-        "image_source": "img/portfolio/sergio_aguero.jpg",
+        "image_source": "static/img/portfolio/sergio_aguero.jpg",
         "answer": "Sergio Aguero"
     },
     
     {
-        "id": 24,
-        "image_source": "img/portfolio/thomas_muller.jpg",
+        "image_source": "static/img/portfolio/thomas_muller.jpg",
         "answer": "Thomas Muller"
     },
     
     {
-        "id": 25,
-        "image_source": "img/portfolio/toni_kroos.jpg",
+        "image_source": "static/img/portfolio/toni_kroos.jpg",
         "answer": "Toni Kroos"
     },
     
     {
-        "id": 26,
-        "image_source": "img/portfolio/victor_moses.jpg",
+        "image_source": "static/img/portfolio/victor_moses.jpg",
         "answer": "Victor Moses"
     },
     
     {
-        "id": 27,
-        "image_source": "img/portfolio/alvaro_morata.jpg",
+        "image_source": "static/img/portfolio/alvaro_morata.jpg",
         "answer": "Alvaro Morata"
     },
     
     {
-        "id": 28,
-        "image_source": "img/portfolio/arjen_robben.jpg",
+        "image_source": "static/img/portfolio/arjen_robben.jpg",
         "answer": "Arjen Robben"
     },
     
     {
-        "id": 29,
-        "image_source": "img/portfolio/jesse_lingard.jpg",
+        "image_source": "static/img/portfolio/jesse_lingard.jpg",
         "answer": "Jesse Lingard"
     },
     
     {
-        "id": 30,
-        "image_source": "img/portfolio/jose_fonte.jpg",
+        "image_source": "static/img/portfolio/jose_fonte.jpg",
         "answer": "Jose Fonte"
     }
-    
 ]
