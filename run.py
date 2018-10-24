@@ -1,18 +1,21 @@
 import os
 import json
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash
 
 app = Flask(__name__)
+app.secret_key = "secret"
 
 @app.route('/')
 def index():
     return render_template("index.html")
 
 @app.route('/register', methods =["GET", "POST"])
-def username():
+def register():
     if request.method == "POST":
         with open("data/users.txt", "a") as user_list:
             user_list.write(request.form["username"])
+    if request.method == "POST":
+        flash("Thanks for registering {}!".format(request.form["username"]))
     return render_template("register.html")
 
 @app.route('/play')
@@ -21,7 +24,7 @@ def play():
     with open("data/players.json", "r") as json_data:
         data = json.load(json_data)
     return render_template("play.html", players=data)
-
+    
 @app.route('/leaderboard')
 def leaderboard():
     return render_template("leaderboard.html")
