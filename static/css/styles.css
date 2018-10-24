@@ -1,0 +1,19 @@
+.img-fluid{
+    height: 200px;
+    width: 100%;
+}
+
+.floating-label-form-group input, .floating-label-form-group textarea {
+    text-align: center
+}
+
+.btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mb-0, .my-0 {
+    margin-bottom: 0!important;
+    margin-top: 75px;
+}
