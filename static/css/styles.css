@@ -1,9 +1,11 @@
-.img-fluid{
-    height: 200px;
-    width: 100%;
+.img-fluid {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.floating-label-form-group input, .floating-label-form-group textarea {
+.floating-label-form-group input,
+.floating-label-form-group textarea {
     text-align: center
 }
 
@@ -13,7 +15,8 @@
     margin-right: auto;
 }
 
-.mb-0, .my-0 {
+.mb-0,
+.my-0 {
     margin-bottom: 0!important;
     margin-top: 75px;
 }
@@ -22,4 +25,20 @@
     color: #2c3e50!important;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (min-width: 992px) {
+    .img-fluid {
+        width: 50%;
+        height: 350px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .floating-label-form-group {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
