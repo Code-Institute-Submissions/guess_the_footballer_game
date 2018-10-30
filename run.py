@@ -1,9 +1,11 @@
 import os
 import json
-from flask import Flask, render_template, request, flash
+import random
+from flask import Flask, render_template, request, flash, redirect, url_for, session
 
 app = Flask(__name__)
 app.secret_key = "secret"
+app.secret_key = os.urandom(24)
 
 @app.route('/')
 def index():
@@ -21,8 +23,8 @@ def register():
 @app.route('/play')
 def play():
     data = []
-    with open("data/players.json", "r") as json_data:
-        data = json.load(json_data)
+    with open("data/players.json", "r") as players_data:
+        data = json.load(players_data)
     return render_template("play.html", players=data)
     
 @app.route('/leaderboard')
