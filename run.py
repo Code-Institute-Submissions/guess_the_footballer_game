@@ -13,19 +13,19 @@ def users():
         registered_users = user_data.read().splitlines()
         return registered_users
 
-"""Start game variables"""
-def start_game():
-    session['question_number'] = 1
-    session['players'] = generate_random_player()
-    session['user_score'] = 0
-    return session['question_number'], session['players'], session['user_score']
-
 """Generate Random Player Image"""
 def generate_random_player():
     with open("data/players.json", "r") as players_data:
         players_list = json.load(players_data)["players"]
         random.shuffle(players_list)
         return players_list
+        
+"""Start game variables"""
+def start_game():
+    session['question_number'] = 1
+    session['players'] = generate_random_player()
+    session['user_score'] = 0
+    return session['question_number'], session['players'], session['user_score']
 
 """Routing"""
 
@@ -58,14 +58,26 @@ def register_user():
                     return redirect(url_for("play"))
         return render_template("register.html")
             
-@app.route('/play')
+"""@app.route('/play')
 def play():
-    """flash('Thanks for registering "{}". Good luck playing Guess The Footballer!'.format(request.form["username"]))"""
     data = []
     with open("data/players.json", "r") as players_data:
         data = json.load(players_data)
-    return render_template("play.html", players=data)
-
+    return render_template("play.html", players=data)"""
+    
+@app.route('/play')
+def play():
+    if session:
+        users()
+        start_game()
+        question_number = session['question_number']
+        data = session['players']
+        score = session['user_score']
+        """flash('Welcome "{}". Good luck playing Guess The Footballer!'.format(request.form["username"]))"""
+        return render_template("play.html", question_number=question_number, players=data, user_score=score)
+    """else:
+        return redirect(url_for("index"))"""
+    
 @app.route('/leaderboard') 
 def leaderboard():
     return render_template("leaderboard.html")
