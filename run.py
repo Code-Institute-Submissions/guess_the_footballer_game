@@ -68,12 +68,12 @@ def play():
 @app.route('/play')
 def play():
     if session:
+        """flash('Welcome "{}". Good luck playing Guess The Footballer!'.format(request.form[""]))"""
         users()
         start_game()
         question_number = session['question_number']
         data = session['players']
         score = session['user_score']
-        """flash('Welcome "{}". Good luck playing Guess The Footballer!'.format(request.form["username"]))"""
         return render_template("play.html", question_number=question_number, players=data, user_score=score)
     """else:
         return redirect(url_for("index"))"""
