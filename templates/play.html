@@ -6,12 +6,18 @@
         <h2 class="text-center text-uppercase text-white">Play</h2>
         <hr class="star-light mb-5">
         
+        {% with messages = get_flashed_messages() %} {% if messages %}
+        <h2 class="font-weight-light mb-0 flash">{% for message in messages %} {{ message }}</h2>
+        {% endfor %} {% endif %} {% endwith %}
+        
         <div class="row">
           
             {% for player in players %}
+            
+            {% if ( loop.index == question_number) and ( loop.index <= 10 ) %} 
           
             <div class="col-md-12">
-                <img class="img-fluid" src="{{ player.image_source }}" alt="">
+                <img class="img-fluid" {{ loop.index }}. src="{{ player.image_source }}" alt="player image">
                 <form method="POST">
                 <div class="control-group">
                     <div class="form-group floating-label-form-group answers controls pb-2">
@@ -25,7 +31,8 @@
                 </div>
                 </form>
             </div>
-          
+              
+            {% endif %}
             {% endfor %}
       
         </div>
