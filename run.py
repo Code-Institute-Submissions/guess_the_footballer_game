@@ -7,18 +7,11 @@ app = Flask(__name__)
 app.secret_key = "secret"
 app.secret_key = os.urandom(24)
 
-"""Read userfile for active users"""
+"""Read userfile for registered users"""
 def users():
     with open("data/users.txt", "r") as user_data:
         registered_users = user_data.read().splitlines()
         return registered_users
-
-"""Generate Random Player Image"""
-def generate_random_player():
-    with open("data/players.json", "r") as players_data:
-        players_list = json.load(players_data)["players"]
-        random.shuffle(players_list)
-        return players_list
         
 """Start game variables"""
 def start_game():
@@ -26,15 +19,28 @@ def start_game():
     session['players'] = generate_random_player()
     session['user_score'] = 0
     return session['question_number'], session['players'], session['user_score']
-
+    
+"""Generate Random Player Image"""
+def generate_random_player():
+    with open("data/players.json", "r") as players_data:
+        players_list = json.load(players_data)["players"]
+        random.shuffle(players_list)
+        return players_list
+        
+"""Scores"""
+def user_scores():
+    with open("data/scores.json", "r") as score_data:
+        data = json.load(score_data)
+        return data
+        
 """Routing"""
 
 @app.route('/')
 def index():
     return render_template("index.html")
     
-@app.route('/register')
-def show_register_page():
+app.route('/register')
+def register():
     if session:
         return redirect(url_for("play"))
     else:
@@ -57,26 +63,20 @@ def register_user():
                     session['user'] = new_user
                     return redirect(url_for("play"))
         return render_template("register.html")
-            
-"""@app.route('/play')
-def play():
-    data = []
-    with open("data/players.json", "r") as players_data:
-        data = json.load(players_data)
-    return render_template("play.html", players=data)"""
     
 @app.route('/play')
 def play():
     if session:
-        """flash('Welcome "{}". Good luck playing Guess The Footballer!'.format(request.form[""]))"""
         users()
         start_game()
+        registered_users = users()
         question_number = session['question_number']
         data = session['players']
         score = session['user_score']
         return render_template("play.html", question_number=question_number, players=data, user_score=score)
-    """else:
-        return redirect(url_for("index"))"""
+    else:
+        return redirect(url_for("index"))
+    
     
 @app.route('/leaderboard') 
 def leaderboard():
