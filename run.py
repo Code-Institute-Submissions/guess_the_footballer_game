@@ -44,14 +44,20 @@ def login():
     if session:
         return redirect(url_for("play"))
     else:
+        if request.method == "POST":
+            returning_user = request.form["username"]
+            registered_users = users()
+            if returning_user in registered_users:
+                session['user'] = returning_user
+                return redirect(url_for("play"))
+            else:
+                flash('The username "{}" is not recognized. Please enter a registered username '.format(request.form["username"]))
         return render_template("login.html")
 
-@app.route('/logout', methods = ["GET", "POST"])
+@app.route('/logout')
 def logout():
-    if session:
-        return redirect(url_for("play"))
-    else:
-        return render_template("logout.html")
+        session.clear
+        return redirect(url_for("index"))
     
 app.route('/register')
 def register():
@@ -69,7 +75,7 @@ def register_user():
             new_user = request.form["username"]
             registered_users = users()
             if new_user in registered_users:
-                flash('This username "{}" is already taken. Please choose another'.format(request.form["username"]))
+                flash('The username "{}" is already taken. Please choose another'.format(request.form["username"]))
             else:
                 if request.method == "POST":
                     user_list = open("data/users.txt", "a")
