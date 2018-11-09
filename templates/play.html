@@ -35,6 +35,16 @@
             {% endif %}
             {% endfor %}
       
+            <div class="current_score">
+                {% if session %}
+                    {% if session['question_number'] == 1 %}
+                    <p>Welcome {{session['user']}}! Here is your first question. Good luck!</p>
+                    {% endif %}
+                    {% if session['question_number'] > 1 %}
+                    <p>{{session['user']}}, your score is {{session['user_score']}} out of {{session['question_number']}}</p>
+                    {% endif %}
+                {% endif %}
+            </div>
         </div>
     </div>
 </section>
