@@ -39,6 +39,20 @@ def user_scores():
 def index():
     return render_template("index.html")
     
+@app.route('/login', methods = ["GET", "POST"])
+def login():
+    if session:
+        return redirect(url_for("play"))
+    else:
+        return render_template("login.html")
+
+@app.route('/logout', methods = ["GET", "POST"])
+def logout():
+    if session:
+        return redirect(url_for("play"))
+    else:
+        return render_template("logout.html")
+    
 app.route('/register')
 def register():
     if session:
@@ -86,10 +100,6 @@ def leaderboard():
 def contact():
     return render_template("contact.html")
     
-@app.route('/about')
-def about():
-    return render_template("about.html")
-
 if __name__=='__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
