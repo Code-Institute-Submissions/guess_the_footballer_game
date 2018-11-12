@@ -1,4 +1,6 @@
-[
+{
+    "players": [
+        
     {
         "image_source": "static/img/portfolio/neymar.jpg",
         "answer": "Neymar"
@@ -6,146 +8,148 @@
     
     {
         "image_source": "static/img/portfolio/hugo_lloris.jpg",
-        "answer": "Hugo Lloris"
+        "answer": Lloris"
     },
     
     {
         "image_source": "static/img/portfolio/lorenzo_insigne.jpg",
-        "answer": "Lorenzo Insigne"
+        "answer": "Insigne"
     },
     
     {
         "image_source": "static/img/portfolio/keiran_trippier.jpg",
-        "answer": "Keiran Trippier"
+        "answer": "Trippier"
     },
     
     {
         "image_source": "static/img/portfolio/roberto_firmino.jpg",
-        "answer": "Roberto Firmino"
+        "answer": "Firmino"
     },
     
     {
         "image_source": "static/img/portfolio/jordi_alba.jpg",
-        "answer": "Jordi Alba"
+        "answer": "Alba"
     },
     
     {
         "image_source": "static/img/portfolio/antonio_valencia.jpg",
-        "answer": "Antonio Valencia"
+        "answer": "Valencia"
     },
     
     {
         "image_source": "static/img/portfolio/benjamin_pavard.jpg",
-        "answer": "Benjamin Pavard"
+        "answer": "Pavard"
     },
     
     {
         "image_source": "static/img/portfolio/christian_eriksen.jpg",
-        "answer": "Christian Eriksen"
+        "answer": "Eriksen"
     },
     
     {
         "image_source": "static/img/portfolio/danny_welbeck.jpg",
-        "answer": "Danny Welbeck"
+        "answer": "Welbeck"
     },
     
     {
         "image_source": "static/img/portfolio/denis_cheryshev.jpg",
-        "answer": "Denis Cheryshev"
+        "answer": "Cheryshev"
     },
     
     {
         "image_source": "static/img/portfolio/diego_godin.jpg",
-        "answer": "Diego Godin"
+        "answer": "Godin"
     },
     
     {
         "image_source": "static/img/portfolio/dimitri_payet.jpg",
-        "answer": "Dimitri Payet"
+        "answer": "Payet"
     },
     
     {
         "image_source": "static/img/portfolio/dries_mertens.jpg",
-        "answer": "Dries Mertens"
+        "answer": "Mertens"
     },
     
     {
         "image_source": "static/img/portfolio/harry_maguire.jpg",
-        "answer": "Harry Maguire"
+        "answer": "Maguire"
     },
     
     {
         "image_source": "static/img/portfolio/ivan_perisic.jpg",
-        "answer": "Ivan Perisic"
+        "answer": "Perisic"
     },
     
     {
         "image_source": "static/img/portfolio/jadon_sancho.jpg",
-        "answer": "Jadon Sancho"
+        "answer": "Sancho"
     },
     
     {
         "image_source": "static/img/portfolio/james_milner.jpg",
-        "answer": "James Milner"
+        "answer": "Milner"
     },
     
     {
         "image_source": "static/img/portfolio/john_stones.jpg",
-        "answer": "John Stones"
+        "answer": "Stones"
     },
     
     {
         "image_source": "static/img/portfolio/mario_mandzukic.jpg",
-        "answer": "Mario Mandzukic"
+        "answer": "Mandzukic"
     },
     
     {
         "image_source": "static/img/portfolio/olivier_giroud.jpg",
-        "answer": "Olivier Giroud"
+        "answer": "Giroud"
     },
     
     {
         "image_source": "static/img/portfolio/raphael_varane.jpg",
-        "answer": "Raphael Varane"
+        "answer": "Varane"
     },
     
     {
         "image_source": "static/img/portfolio/sergio_aguero.jpg",
-        "answer": "Sergio Aguero"
+        "answer": "Aguero"
     },
     
     {
         "image_source": "static/img/portfolio/thomas_muller.jpg",
-        "answer": "Thomas Muller"
+        "answer": "Muller"
     },
     
     {
         "image_source": "static/img/portfolio/toni_kroos.jpg",
-        "answer": "Toni Kroos"
+        "answer": "Kroos"
     },
     
     {
         "image_source": "static/img/portfolio/victor_moses.jpg",
-        "answer": "Victor Moses"
+        "answer": "Moses"
     },
     
     {
         "image_source": "static/img/portfolio/alvaro_morata.jpg",
-        "answer": "Alvaro Morata"
+        "answer": "Morata"
     },
     
     {
         "image_source": "static/img/portfolio/arjen_robben.jpg",
-        "answer": "Arjen Robben"
+        "answer": "Robben"
     },
     
     {
         "image_source": "static/img/portfolio/jesse_lingard.jpg",
-        "answer": "Jesse Lingard"
+        "answer": "Lingard"
     },
     
     {
         "image_source": "static/img/portfolio/jose_fonte.jpg",
-        "answer": "Jose Fonte"
+        "answer": "Fonte"
     }
 ]
+
+}
