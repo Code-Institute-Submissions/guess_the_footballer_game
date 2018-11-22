@@ -38,22 +38,25 @@
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
+          
+          {% if session %}
+          
+          <p class="welcome_user">Welcome {{session['user']}}!</p>
           <ul class="navbar-nav ml-auto">
-            
-            {% if session %}
-            
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/leaderboard">Leaderboard</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/logout">Logout</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/scoreboard">Scoreboard</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/contact">Contact</a>
             </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger">Welcome {{session['user']}}!</a>
-            </li>
+          </ul>
             
-            {% else %}
-            
+          {% else %}
+          
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/login">Login</a>
             </li>
@@ -66,10 +69,10 @@
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/contact">Contact</a>
             </li>
-            
-            {% endif %}
-            
           </ul>
+          
+          {% endif %}
+            
         </div>
       </div>
     </nav>
@@ -81,7 +84,7 @@
 
     <div class="copyright py-4 text-center text-white">
       <div class="container">
-        <small>Copyright &copy; Jonathan Walters 2018</small>
+        <small>Jonathan Walters 2018 for the Code Institute</small>
       </div>
     </div>
 
