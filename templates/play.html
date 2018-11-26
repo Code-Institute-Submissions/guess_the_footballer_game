@@ -1,50 +1,65 @@
-{% extends 'base.html' %} 
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <section class="portfolio bg-primary text-white mb-0" id="play">
     <div class="container">
         <h2 class="text-center text-uppercase text-white">Play</h2>
-        <hr class="star-light mb-5">
-        
-        {% with messages = get_flashed_messages() %} {% if messages %}
-        <h2 class="font-weight-light mb-0 flash">{% for message in messages %} {{ message }}</h2>
-        {% endfor %} {% endif %} {% endwith %}
-        
+        <hr class="star-light mb-5"> 
+    
         <div class="row">
-          
-            {% for player in players %}
+            <div class="current_score">
+                {% if session['question_number'] == 1 %}
+                <h3 class = "font-weight-light">Welcome {{session['user']}}! Here is your first question. Good luck!</h3>
+                {% endif %}
             
-            {% if ( loop.index == question_number) and ( loop.index <= 10 ) %} 
-          
+                {% if session['question_number'] in range(2, 21) and session['guess'] == session['correct_answer'] %}
+                <h3 class = "font-weight-light">Correct {{session['user']}}! Your score so far is {{session['score']}} out of {{session['question_number']|int -1}}. Here's the next question.</h3>
+                {% elif session['question_number'] in range(2, 21) and session['guess'] != session['correct_answer'] %}
+                <h3 class = "font-weight-light">{{session['guess']}} is incorrect {{session['user']}}! Your score so far is {{session['score']}} out of {{session['question_number']|int -1}}. Try the next question.</h3>
+                {% endif %}
+                
+                {% if session['question_number'] == 21 and session['guess'] == session['correct_answer'] %}
+                <h3 class = "font-weight-light">Correct {{session['user']}}! Your final score is {{session['score']}} out of {{session['question_number']|int -1}}</h3>
+                {% elif session['question_number'] == 21 and session['guess'] != session['correct_answer'] %}
+                <h3 class = "font-weight-light">{{session['guess']}} is incorrect {{session['user']}}! Your final score is {{session['score']}} out of {{session['question_number']|int -1}}.</h3>
+                {% endif %}
+                
+            </div>
+
+            {% for player in players %} 
+            {% if ( loop.index == question_number) and ( loop.index <=20 ) %} 
+            
             <div class="col-md-12">
                 <img class="img-fluid" {{ loop.index }}. src="{{ player.image_source }}" alt="player image">
                 <form method="POST">
-                <div class="control-group">
-                    <div class="form-group floating-label-form-group answers controls pb-2">
-                      <textarea rows="1" class="form-control" id="username" name="answer1" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer."></textarea>
+                    <div class="control-group">
+                        <div class="">
+                            <input id="question_number" name="question_number" type="text" value="{{ loop.index }}"></input>
+                        </div>
+                        <div class="">
+                            <input id="answer" name="answer" type="text" value="{{ player.answer }}"></input>
+                        </div>
+                        <div class="form-group floating-label-form-group answers controls pb-2">
+                            <input class="form-control" id="user_answer" name="user_answer" type="text" placeholder="Enter Answer" required="required" data-validation-required-message="Please enter your answer."></input>
+                        </div>
                     </div>
-                </div>
-                <br>
-                <div id="success"></div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
-                </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary" id="sendMessageButton">Submit</button>
+                    </div>
                 </form>
             </div>
-              
+            
+            {% elif ( loop.index == question_number) and ( loop.index ==21 ) %}
+            
+            <div class="col-md-12">
+                <img class="img-fluid" src="{{ url_for ('static', filename='img/goal.jpg') }}" alt="goal!">
+                <h3 class = "font-weight-light">Thanks for playing. Go to the scoreboard to see where you rank in the all time list!"</h3>
+            </div>
+        
             {% endif %}
             {% endfor %}
-      
-            <div class="current_score">
-                {% if session %}
-                    {% if session['question_number'] == 1 %}
-                    <p>Welcome {{session['user']}}! Here is your first question. Good luck!</p>
-                    {% endif %}
-                    {% if session['question_number'] > 1 %}
-                    <p>{{session['user']}}, your score is {{session['user_score']}} out of {{session['question_number']}}</p>
-                    {% endif %}
-                {% endif %}
-            </div>
+        
         </div>
     </div>
 </section>
