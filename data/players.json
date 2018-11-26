@@ -149,6 +149,106 @@
     {
         "image_source": "static/img/portfolio/jose_fonte.jpg",
         "answer": "fonte"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/richarlison.jpg",
+        "answer": "richarlison"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/willian.jpg",
+        "answer": "willian"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/david_luiz.jpg",
+        "answer": "luiz"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/douglas_costa.jpg",
+        "answer": "costa"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/justin_kluivert.jpg",
+        "answer": "kluivert"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/axel_witsel.jpg",
+        "answer": "witsel"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/joshua_kimmich.jpg",
+        "answer": "kimmich"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/francis_coquelin.jpg",
+        "answer": "coquelin"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/paul_pogba.jpg",
+        "answer": "pogba"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/paulinho.jpg",
+        "answer": "paulinho"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/marco_verratti.jpg",
+        "answer": "verratti"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/william_carvalho.jpg",
+        "answer": "carvalho"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/edin_dzeko.jpg",
+        "answer": "dzeko"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/marco_asensio.jpg",
+        "answer": "asensio"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/david_alaba.jpg",
+        "answer": "alaba"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/thibaut_courtois.jpg",
+        "answer": "courtois"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/timo_werner.jpg",
+        "answer": "werner"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/blaise_matuidi.jpg",
+        "answer": "matuidi"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/leonardo_bonucci.jpg",
+        "answer": "bonucci"
+    },
+    
+    {
+        "image_source": "static/img/portfolio/memphis_depay.jpg",
+        "answer": "depay"
     }
 ]
 
