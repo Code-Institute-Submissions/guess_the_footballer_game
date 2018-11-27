@@ -6,7 +6,9 @@
 
 .floating-label-form-group input,
 .floating-label-form-group textarea {
-    text-align: center
+    text-align: center;
+    background-color: white;
+    margin-top: 15px;
 }
 
 .btn {
@@ -21,6 +23,19 @@
     margin-top: 75px;
 }
 
+.floating-label-form-group {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+    
+.floating-label-form-group:not(:first-child) {
+    margin-top: 10px;
+    padding-left: 0px;
+    border-left: none;
+}
+
 .flash {
     color: #2c3e50!important;
     text-align: center;
@@ -29,27 +44,53 @@
     font-size: 2rem;
 }
 
+.welcome_user {
+    color: #18bc9c;
+    padding: 16px;
+    font-size: 1.25rem;
+    margin-bottom: 0px;
+}
+
+.score_text {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.hidden_form {
+    display: none;
+}
+
+table {
+    width:100%;
+    text-align: center;
+}
+
 @media (min-width: 992px) {
+    
     .img-fluid {
         width: 50%;
         height: 350px;
         display: block;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 25px;
     }
 
-    .floating-label-form-group {
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
+    .welcome_user {
+        color:#18bc9c;
+        margin: 0px 30px;
+        font-size: 1.25rem;
+        text-align: center;
     }
-}
-
-.current_score {
-    color: white;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    font-size: 2rem;
+    
+    .score_text {
+        padding-left: 200px;
+        padding-right: 200px;
+        padding-bottom: 0px;
+    }
 }
