@@ -6,15 +6,15 @@
         <hr class="star-light mb-5"> 
     
         <div class="row">
-            <div class="current_score">
+            <div class="score_text">
                 {% if session['question_number'] == 1 %}
                 <h3 class = "font-weight-light">Welcome {{session['user']}}! Here is your first question. Good luck!</h3>
                 {% endif %}
             
                 {% if session['question_number'] in range(2, 21) and session['guess'] == session['correct_answer'] %}
-                <h3 class = "font-weight-light">Correct {{session['user']}}! Your score so far is {{session['score']}} out of {{session['question_number']|int -1}}. Here's the next question.</h3>
+                <h3 class = "font-weight-light">Correct {{session['user']}}! Your score so far is {{session['score']}} out of {{session['question_number']|int -1}}. <br>Here's the next question.</h3>
                 {% elif session['question_number'] in range(2, 21) and session['guess'] != session['correct_answer'] %}
-                <h3 class = "font-weight-light">{{session['guess']}} is incorrect {{session['user']}}! Your score so far is {{session['score']}} out of {{session['question_number']|int -1}}. Try the next question.</h3>
+                <h3 class = "font-weight-light">{{session['guess']}} is incorrect {{session['user']}}! Your score so far is {{session['score']}} out of {{session['question_number']|int -1}}. <br>Try the next question.</h3>
                 {% endif %}
                 
                 {% if session['question_number'] == 21 and session['guess'] == session['correct_answer'] %}
@@ -22,7 +22,6 @@
                 {% elif session['question_number'] == 21 and session['guess'] != session['correct_answer'] %}
                 <h3 class = "font-weight-light">{{session['guess']}} is incorrect {{session['user']}}! Your final score is {{session['score']}} out of {{session['question_number']|int -1}}.</h3>
                 {% endif %}
-                
             </div>
 
             {% for player in players %} 
@@ -52,10 +51,14 @@
             
             {% elif ( loop.index == question_number) and ( loop.index ==21 ) %}
             
+        <div class="row">
             <div class="col-md-12">
                 <img class="img-fluid" src="{{ url_for ('static', filename='img/goal.jpg') }}" alt="goal!">
-                <h3 class = "font-weight-light">Thanks for playing. Go to the scoreboard to see where you rank in the all time list!"</h3>
             </div>
+            <div class="score_text">
+                <h3 class="font-weight-light padding">Thanks for playing {{session['user']}}! Go to the scoreboard to see where you rank in the all time list!"</h3>
+            </div>
+        </div>
         
             {% endif %}
             {% endfor %}
