@@ -24,11 +24,19 @@ def start_game():
     session['score'] = 0
     return session['question_number'], session['players'], session['score']
         
-def user_scores():
+def scores():
     with open("data/scores.json", "r") as score_data:
-        data = json.load(score_data)
-        return data
-   
+        scores = json.load(score_data)
+        return scores
+ 
+def scoreboard():
+            user_score = {"user": session["user"], "score": session["score"]}
+            scoreboard = scores()
+            scoreboard["users"].append(user_score)
+            with open("data/scores.json", "w") as score_data:
+                json.dump(scoreboard, score_data)
+            return score_data
+        
 """Routes"""
 
 @app.route('/')
@@ -37,7 +45,7 @@ def index():
         return redirect(url_for("play"))
     else:
         return render_template("index.html")
-    
+        
 @app.route('/login', methods = ["GET", "POST"])
 def login():
     if session:
@@ -78,9 +86,9 @@ def register_user():
                 flash('The username "{}" is already taken. Please choose another'.format(request.form["username"]))
             else:
                 if request.method == "POST":
+                    session['user'] = new_user
                     user_list = open("data/users.txt", "a")
                     user_list.write(new_user + "\n")
-                    session['user'] = new_user
                     return redirect(url_for("play"))
         return render_template("register.html")
     
@@ -110,9 +118,22 @@ def answers():
     else:
         return redirect(url_for("index"))
       
-@app.route('/scoreboard') 
-def scoreboard():
-    return render_template("scoreboard.html")
+@app.route('/scoreboard', methods = ["GET", "POST"]) 
+def view_scoreboard():
+    if session:
+        if session['question_number'] == 21:
+            scoreboard()
+            data=scores()["users"]
+        return render_template("scoreboard.html", scores=data)
+    else:
+        return redirect(url_for("index"))
+        
+"""
+@app.route('/scoreboard')
+def display_scores():
+    data = scores()["users"]
+    return render_template("scoreboard.html", scores=data)        
+"""
 
 @app.route('/contact')
 def contact():
