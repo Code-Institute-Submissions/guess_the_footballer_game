@@ -123,17 +123,10 @@ def view_scoreboard():
     if session:
         if session['question_number'] == 21:
             scoreboard()
-            data=scores()["users"]
-        return render_template("scoreboard.html", scores=data)
+            data = scores()["users"]
+        return render_template("scoreboard.html", score_data=data)
     else:
         return redirect(url_for("index"))
-        
-"""
-@app.route('/scoreboard')
-def display_scores():
-    data = scores()["users"]
-    return render_template("scoreboard.html", scores=data)        
-"""
 
 @app.route('/contact')
 def contact():
