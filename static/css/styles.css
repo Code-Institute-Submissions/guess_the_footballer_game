@@ -55,10 +55,12 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    padding: 20px;
+}
+
+.question_number {
+        font-size: 2.0rem;
+        margin-top: 30px;
 }
 
 .hidden_form {
@@ -66,8 +68,17 @@
 }
 
 table {
+    color: #2a4051;
     width:100%;
     text-align: center;
+}
+
+.contact-text {
+    text-align: center;
+}
+
+h3 > a {
+    color: white;
 }
 
 @media (min-width: 992px) {
@@ -89,8 +100,8 @@ table {
     }
     
     .score_text {
-        padding-left: 200px;
-        padding-right: 200px;
+        padding-left: 160px;
+        padding-right: 160px;
         padding-bottom: 0px;
     }
 }
