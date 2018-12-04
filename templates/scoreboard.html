@@ -8,19 +8,25 @@
             <div class="col-lg-8 mx-auto">
                 <table>
                     <tr>
+                        <th>Position</th>
                         <th>Username</th>
                         <th>Score</th>
-                        <th>Position</th>
                     </tr>
+                    
+                    {% for user_scores in score_data|sort(attribute='score', reverse=True) %}
+                    
                     <tr>
-                        <td>Jon</td>
-                        <td>20</td>
-                        <td>1</td>
+                        <td>{{loop.index}}</td>
+                        <td>{{user_scores.user}}</td>
+                        <td>{{user_scores.score}}</td>
                     </tr>
+                    
+                    {% endfor %}
+                
                 </table>
-            </<div>
+                </<div>
+            </div>
         </div>
-    </div>
 </section>
 
 {% endblock %}
