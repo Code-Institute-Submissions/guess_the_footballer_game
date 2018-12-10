@@ -104,4 +104,9 @@ h3 > a {
         padding-right: 160px;
         padding-bottom: 0px;
     }
+
+    .contact-text {
+        margin-left: auto;
+        margin-right: auto;
+    }    
 }
