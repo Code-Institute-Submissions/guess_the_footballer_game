@@ -42,7 +42,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           
-          {% if session and question_number != 21 %}
+          {% if session['question_number'] in range(1, 20) %}
           
           <p class="welcome_user">Welcome {{session['user']}}!</p>
           <ul class="navbar-nav ml-auto">
@@ -54,7 +54,7 @@
             </li>
           </ul>
           
-          {% elif session and question_number == 21 %}
+          {% elif session['question_number'] == 21 %}
           
           <p class="welcome_user">Welcome {{session['user']}}!</p>
           <ul class="navbar-nav ml-auto">
