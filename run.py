@@ -66,14 +66,6 @@ def logout():
         session.clear()
         return redirect(url_for("index"))
     
-"""app.route('/register')
-def register():
-    if session:
-        return redirect(url_for("play"))
-    else:
-        return render_template("register.html")
-"""
-
 @app.route('/register', methods = ["GET", "POST"])
 def register_user():
     if session:
