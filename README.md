@@ -57,6 +57,16 @@ Other technologies used in this project are:
 
 ## Testing
 
+Manual testing has been performed to test the features of the Guess the Footballer Game.
+
+The login feature has been tested by entering an unregistered user name into the login field. A message to inform the user that they are not registered is correctly displayed, as well as a message to inform the user if a username is already taken. Equally testing has been performed and validated for registered users to log in and for new users registering who are both taken directly to question 1 once they are logged in. Once the user logs in or registers a welcome message is displayed in the navbar, which manual testing has validated. The logout feature has been tested and correctly logs the user out and redirects back to the home page.
+
+The contact and homepage links were tested to ensure they work correctly in the navbar.
+
+A number of complete quizes have been performed answering all 20 questions. This has confirmed that the images of each footballer are being randomly generated as expected. During this testing both correct and incorrect answers were submitted to ensure these are validated and generating the correct score for each game. Question numbers and messages for correct and incorrect answers are both working correctly and have been validated by extensive testing. Once all 20 questions have been answered the correct final score is displaying correctly, with a message to go to the scoreboard to see where the user ranks on the all time list.
+
+The scoreboard is correctly showing and ranking the users by their final score for the quiz. Each user is being added to the scorebaord upon answering the final question.
+
 ## Deployment
 
 This app is hosted on Heroku. To be able to run the code on Heroku, a Procfile was added to tell Heroku it's a Python project (web: python app.py), as were the Config vars for IP (0.0.0.0) and PORT (5000).
